@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kualifikasi Buah Lemon</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Kualifikasi Buah Lemon</h1>
+        <form id="qualification-form" method="POST" action="/qualify" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="lemon-image">Unggah Gambar Buah Lemon:</label>
+                <input type="file" class="form-control-file" id="lemon-image" name="lemon_image" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Kualifikasi</button>
+        </form>
+        <div id="result" class="mt-4">
+            {% if qualification %}
+                <p class="text-center">Hasil prediksi menunjukkan bahwa kualitas lemon adalah: </p>
+            {% endif %}
+        </div>
+        </div>
+    </div>
+</body>
+</html>
